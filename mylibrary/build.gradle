@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.ZYF99'
 
@@ -34,5 +35,18 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.2.13"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //Json Serializer
+    implementation("com.squareup.moshi:moshi-kotlin:1.9.2")
+
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.10.0"
 
 }
